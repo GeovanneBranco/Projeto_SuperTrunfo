@@ -65,9 +65,9 @@ int main () {
      printf("\n\n");
 
      densidade1 = (float) pop1 / area1;
-     densidade2 = (float) pop2 / area2; 
+     densidade2 = (float) pop2 / area2;
      percap1 =  pib1 / (float)pop1;
-     percap2 =  pib2 / (float)pop2;
+     percap2 = pib2 / (float)pop2;
 
      // Apresentacao dos dados digitados pelo usuario da forma apropriada da sua primeira carta.//
      printf(" Carta 1: \n Estado: %c \n Codigo: %s \n Nome da cidade: %s \n Populacao: %d \n Area: %.2f Kms² \n PIB: %.2f bilhoes de reais \n Numero de Pontos Turisticos: %d\n Densidade Populacional: %.2f hab/km² \n PIB per Capita: %.2f reais \n"
