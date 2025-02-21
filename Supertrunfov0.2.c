@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <math.h>
 
 int main () {
 
    int pop1, pop2, pt1, pt2;
    char codigo1[50],  codigo2[50], cidade1[50],cidade2[50];
-   float area1, area2, pib1,  pib2, densidade1, densidade2, percap1, percap2;
+   float area1, area2, pib1,  pib2;
    char estado1, estado2;
 
 
@@ -64,19 +65,20 @@ int main () {
 
      printf("\n\n");
 
-     densidade1 = (float) pop1 / area1;
-     densidade2 = (float) pop2 / area2;
-     percap1 =  pib1 / (float)pop1;
-     percap2 = pib2 / (float)pop2;
+     // calculo das variaveis Densidade e PIB per Capita.
+     float densidade1 =  pop1 / area1;
+     float densidade2 =  pop2 / area2; 
+     double percap1 = (pib1 * pow( 10, 7)) / pop1 ;
+     double percap2 = (pib2 * pow( 10, 7)) / pop2 ;
 
      // Apresentacao dos dados digitados pelo usuario da forma apropriada da sua primeira carta.//
-     printf(" Carta 1: \n Estado: %c \n Codigo: %s \n Nome da cidade: %s \n Populacao: %d \n Area: %.2f Kms² \n PIB: %.2f bilhoes de reais \n Numero de Pontos Turisticos: %d\n Densidade Populacional: %.2f hab/km² \n PIB per Capita: %.2f reais \n"
+     printf(" Carta 1: \n Estado: %c \n Codigo: %s \n Nome da cidade: %s \n Populacao: %d \n Area: %.2f Kms² \n PIB: %.2f bilhoes de reais \n Numero de Pontos Turisticos: %d\n Densidade Populacional: %.2f hab/km² \n PIB per Capita: %.2lf reais \n"
      ,estado1, codigo1, cidade1, pop1, area1, pib1, pt1, densidade1, percap1);
 
      printf("\n \n");
 
      // Apresentacao dos dados digitados pelo usuario da forma apropriada pela segunda vez.
-     printf(" Carta 2: \n Estado: %c \n Codigo: %s \n Nome da cidade: %s \n Populacao: %d \n Area: %.2f Kms² \n PIB: %.2f bilhoes de reais \n Numero de Pontos Turisticos: %d \n Densidade Populacional: %.2f hab/km² \n PIB per Capita: %.2f reais \n",
+     printf(" Carta 2: \n Estado: %c \n Codigo: %s \n Nome da cidade: %s \n Populacao: %d \n Area: %.2f Kms² \n PIB: %.2f bilhoes de reais \n Numero de Pontos Turisticos: %d \n Densidade Populacional: %.2f hab/km² \n PIB per Capita: %.2lf reais \n",
      estado2, codigo2, cidade2, pop2, area2, pib2, pt2, densidade2, percap2);
 
    return 0;
