@@ -8,8 +8,6 @@ int main () {
    float area1, area2, pib1,  pib2;
    char estado1, estado2;
 
-
-
     // uma breve saudacao ao usuario dando uma breve instrucao de como deve seguir.
       printf(" Bem vindo ao SuperTrunfo Cidades - Vamos iniciar nosso jogo ! \n \n Abaixo Apresente corretamente as informacoes solicitadas das suas cartas: \n \n");
 
